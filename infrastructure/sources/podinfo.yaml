@@ -4,4 +4,4 @@ metadata:
   name: podinfo
 spec:
   interval: 5m
-  url: https://stefanprodan.github.io/podinfo
+  url: https://github.com/oxcp/podinfo
