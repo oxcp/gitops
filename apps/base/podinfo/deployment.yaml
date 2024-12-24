@@ -19,10 +19,16 @@ spec:
         app: podinfo
     spec:
       containers:
-      - name: podinfod
+      - name: podinfo
         image: mcr.microsoft.com/k8se/quickstart:latest
         imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "128Mi"
+            cpu: "250m"
         ports:
-        - name: http
-          containerPort: 80
-          protocol: TCP
+        - containerPort: 80
+
