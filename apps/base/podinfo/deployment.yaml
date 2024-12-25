@@ -30,7 +30,5 @@ spec:
           requests:
             memory: "512Mi"
         ports:
-        - name: http
-          containerPort: 80
-          protocol: TCP
+        - containerPort: 80
 
