@@ -8,5 +8,7 @@ spec:
   selector:
     app: podinfo
   ports:
-    - port: 80
-      targetPort: 80
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: http
