@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: podinfo
-  namespace: podinfo
 spec:
   minReadySeconds: 3
   revisionHistoryLimit: 5
@@ -21,14 +20,15 @@ spec:
     spec:
       containers:
       - name: podinfo
-        image: mcr.microsoft.com/k8se/quickstart:latest
-        imagePullPolicy: IfNotPresent
+        image: gckacr.azurecr.io/helloaks:v0
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "1024Mi"
             cpu: "500m"
           requests:
             memory: "512Mi"
+            cpu: "250m"
         ports:
         - containerPort: 80
 
