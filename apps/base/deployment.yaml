@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: podinfo
-        image: gckacr.azurecr.io/helloaks:v0
+        image: gckacr.azurecr.io/hellok8s:v0
         imagePullPolicy: Always
         resources:
           limits:
